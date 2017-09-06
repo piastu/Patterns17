@@ -1,0 +1,52 @@
+@import "../_var";
+
+.chat {
+    padding-bottom: 5px;
+
+    .messages-container {
+        position: relative;
+        padding: 10px;
+        height: 144px;
+        border: 1px solid #383839;
+    }
+
+    .messages {
+        padding: 5px 11px;
+        box-sizing: border-box;
+        font: 14px/22px @font;
+        max-height: 144px;
+
+        .msg {
+            + .msg {
+                margin-top: 22px;
+            }
+        }
+
+        .author {
+            color: #39c;
+        }
+    }
+
+    .input-row {
+        display: flex;
+        margin: 20px 0;
+
+        .btn {
+            flex: 0 0;
+            margin-left: 10px;
+        }
+    }
+
+    .message {
+        display: block;
+        flex-grow: 1;
+        width: 100%;
+        height: 44px;
+        padding: 11px 21px;
+        box-sizing: border-box;
+        border: 1px solid #383839;
+        background: transparent;
+        font: 14px/22px @font;
+        color: #fff;
+    }
+}

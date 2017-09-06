@@ -1,0 +1,266 @@
+.battle-ships .layout .blue-back {
+    background: url(../images/blue-back.png);
+    width: 1197px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.battle-ships .layout .light-blue-back {
+    background: url("../images/light-blue-back.png");
+    width: 576px;
+    height: 417px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.battle-ships .layout .rocket {
+    background: url("../images/rocket.png");
+    width: 15px;
+    height: 103px;
+    position: absolute;
+    z-index: 1;
+}
+
+.battle-ships .layout .rocket.left-rocket {
+    left: 110px;
+    top: 2px;
+}
+
+.battle-ships .layout .rocket.right-rocket {
+    left: 440px;
+    top: 45px;
+}
+
+.battle-ships .layout .cube.cube-player {
+    top: 104px;
+    left: 0;
+    z-index: 1;
+}
+
+.battle-ships .layout .cube.cube-enemy {
+    top: 198px;
+    left: 556px;
+    z-index: 1;
+}
+
+.battle-ships .layout .drowned-ship {
+    background: url("../images/drowned-ship.png");
+    width: 91px;
+    height: 129px;
+    position: absolute;
+    z-index: 0;
+}
+
+.battle-ships .layout .drowned-ship.drowned-ship-left {
+    top: 502px;
+    left: 191px;
+}
+
+.battle-ships .layout .drowned-ship.drowned-ship-right {
+    top: 528px;
+    left: 748px;
+}
+
+
+.battle-ships .layout .grid-block.grid-block-player {
+    z-index: 600;
+    padding: 0;
+    position: absolute;
+    top: 6px;
+    left: 115px;
+}
+
+.battle-ships .layout .grid-block.grid-block-enemy {
+    z-index: 600;
+    padding: 0;
+    position: absolute;
+    top: 100px;
+    left: 672px;
+}
+
+.battle-ships .layout .grid-block .row-grid.letters {
+    top: 152px;
+    left: 185px;
+}
+
+.battle-ships .layout .grid-block .row-grid.nums {
+    top: 150px;
+    left: -131px;
+}
+
+.battle-ships .layout .score-block {
+    font-size: 24px;
+    font-family: "PT Sans", 'serif';
+    color: rgb( 255, 255, 255 );
+    font-weight: bold;
+    position: absolute;
+    width: 231px;
+    z-index: 201;
+}
+
+.battle-ships .layout .score-block.score-block-player {
+    top: 450px;
+    left: 22px;
+}
+
+.battle-ships .layout .score-block.score-block-enemy {
+    top: 450px;
+    left: 578px;
+}
+
+.battle-ships .layout .score-block .score {
+    padding-bottom: 24px;
+}
+
+.battle-ships .layout .score-block .score small {
+    padding-left: 2px;
+    font-size: 14px;
+}
+
+.battle-ships .layout .score-block .score.score-player {
+    padding-top: 5px;
+    padding-bottom: 19px;
+}
+
+.battle-ships .layout .score-block .health-block {
+    height: 100px;
+}
+
+.battle-ships .layout .score-block .health-row {
+    display: flex;
+    padding-bottom: 10px;
+    height: 17px;
+}
+
+.battle-ships .layout .score-block .health-row .health-bar {
+    display: flex;
+    padding-right: 18px;
+}
+
+.battle-ships .layout .score-block .health-row .health-bar .health-cell {
+    width: 22px;
+    margin-right: 2px;
+    background: #393a3f;
+    opacity: 0.6;
+}
+
+.battle-ships .layout .score-block .health-row .health-bar .health-cell.active {
+    background: white;
+    opacity: 1;
+}
+
+.battle-ships .layout .turn.active {
+    background: #ffcc00;
+    font-size: 24px;
+    font-family: "PT Sans", 'sans-serif';
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 305px;
+    left: 439px;
+    width: 320px;
+    height: 56px;
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battle-ships .layout .grid-block .active-target {
+    content: '';
+    background: url("../images/target.png");
+    width: 67px;
+    height: 37px;
+    position: absolute;
+}
+
+
+.battle-ships .layout .ship-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9995;
+}
+
+
+.battle-ships .layout  .ship-game.rotate {
+    transform: scale(-1, 1);
+}
+
+
+.battle-ships .layout .grid-block .grid .cell-enemy:hover::after {
+    content: '';
+    position: absolute;
+    background: url("../images/target2.png");
+    width: 67px;
+    height: 37px;
+    bottom: 11px;
+    right: -8px;
+    transform: rotateZ(25deg) rotateX(-101deg) rotateY(62deg);
+}
+
+.battle-ships .layout .grid-block .grid .marked-cell {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    border-radius: 100%;
+    background-color: black;
+}
+
+
+.battle-ships .layout .grid-block .grid .fire {
+    position: absolute;
+    left: calc(50% - 40px);
+    transform-style: preserve-3d;
+    transform: rotateZ(25deg) rotateX(-101deg) rotateY(62deg);
+    z-index: 9999;
+}
+
+.battle-ships .layout .grid-block .grid .fire.hit {
+    background: url(../images/explode-ship.png);
+    width: 53px;
+    height: 62px;
+    bottom: 23px;
+    left: -25px;
+}
+
+.battle-ships .layout .grid-block .grid .fire.miss {
+    background: url(../images/miss.png);
+    width: 54px;
+    height: 72px;
+    bottom: 10px;
+}
+
+
+.battle-ships .layout .grid-block .grid .fire::after {
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, .9);
+    position: absolute;
+    bottom: 50px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+
+.battle-ships .layout .grid-block .grid .fire.miss::after {
+    content: 'Мимо!';
+}
+
+.battle-ships .layout .grid-block .grid .fire.hit::after {
+    content: 'Попадание!';
+    left: -9px;
+}
+

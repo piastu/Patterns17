@@ -1,0 +1,37 @@
+@import "../_var";
+
+.main-page {
+    .centered {
+        position: relative;
+        height: ~'calc(100vh - @{headerHeight})';
+        min-height: @cubeHeight;
+    }
+
+
+    .battle-cube {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -1 * (@cubeWidth / 2) + 47px;
+        margin-top: -1 * (@cubeHeight / 2) - 15px;
+    }
+
+    .ships-panel {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        padding-top: 46px;
+
+        .row {
+            padding-bottom: 48px;
+        }
+    }
+
+    .btn {
+        position: relative;
+        z-index: 10;
+        top: 223px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

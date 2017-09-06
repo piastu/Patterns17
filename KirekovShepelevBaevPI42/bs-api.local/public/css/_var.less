@@ -1,0 +1,74 @@
+@import "icons";
+
+/**
+ * Переменные
+ **/
+
+@font: 'PT Sans', sans-serif;
+// @borderRadius: 5px;
+
+@imagePath: '../images/';
+
+@transitTime: 0.3s;
+
+@cYellow: #fc0;
+
+@headerHeight: 82px;
+@cubeWidth: 641px;
+@cubeHeight: 645px;
+@cloudsHeight: 474px;
+@cloudsWidth: 852px;
+
+/**
+ * Сетка
+ **/
+
+@screen-xs: 360px;
+@screen-sm: 620px;
+@screen-md: 960px;
+@screen-lg: 1200px;
+
+@media-xs: ~'(max-width: @{screen-xs})';
+@media-sm: ~'(max-width: @{screen-sm})';
+@media-md: ~'(max-width: @{screen-md})';
+@media-lg: ~'(max-width: @{screen-lg})';
+
+
+/****
+ * Миксины, разное
+ ****/
+
+.size(@width, @height: @width) {
+    width:  @width;
+    height: @height;
+}
+
+.pseudo() {
+    content: '';
+    position: absolute;
+}
+
+.transit(@prop: all, @time: @transitTime, @ease: ease) {
+    transition: @prop @time @ease;
+}
+
+
+
+/*
+.sprite (@left, @top, @width, @height: @width) {
+    .size(@width, @height);
+    background: url('../images/sprite.png') (-1 * @left) (-1 * @top) no-repeat;
+}
+
+.hover-opacity(@opacity: 0.75) {
+    cursor: pointer;
+
+    &:hover {
+        opacity: @opacity;
+    }
+}
+
+.rotate(@degree) {
+    transform: rotate(@degree);
+}
+*/

@@ -1,0 +1,26 @@
+<div class="centered">
+    <button class="btn big js-start-game">— Для начала, расставь корабли, каналья!</button>
+
+    <div class="ships-panel">
+        <div class="row">
+            <div class="ship ship-4-r"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-3-r"></div>
+            <div class="ship ship-3-r"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-2-r"></div>
+            <div class="ship ship-2-r"></div>
+            <div class="ship ship-2-r"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-1-r"></div>
+            <div class="ship ship-1-r"></div>
+            <div class="ship ship-1-r"></div>
+            <div class="ship ship-1-r"></div>
+        </div>
+    </div>
+
+    <?= $this->battleCube()->render('js-field'); ?>
+</div>

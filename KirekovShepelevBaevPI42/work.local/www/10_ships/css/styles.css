@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+.battle-ships {
+    background: black;
+}
+
+
+.battle-ships .layout {
+    background-color: black;
+    width: 1200px;
+    margin: 0 auto;
+    height: 910px;
+    position: relative;
+}
+
+
+.battle-ships .layout .place-your-ships-block, .battle-ships .layout .wait-for-your-enemy-block {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(110, 115, 120, 0.4);
+}
+
+.battle-ships .layout .wait-for-your-enemy-block {
+    top: 100px;
+    height: calc(100% - 100px);
+}
+
+.battle-ships .layout .place-your-ships-block .place-your-ships, .battle-ships .layout .wait-for-your-enemy-block .wait-for-your-enemy {
+    background: #ffcc00;
+    font-size: 24px;
+    font-family: "PT Sans", 'sans-serif';
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 305px;
+    left: 389px;
+    width: 480px;
+    height: 56px;
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.battle-ships .layout .wait-for-your-enemy-block .wait-for-your-enemy {
+    cursor: default;
+    pointer-events: none;
+}
+
+.battle-ships .layout .start-game {
+    background: #ffcc00;
+    font-size: 24px;
+    font-family: "PT Sans", 'sans-serif';
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 575px;
+    left: 389px;
+    width: 480px;
+    height: 56px;
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.battle-ships .layout .start-game {
+    background: #ffcc00;
+}
+
+.battle-ships .layout .start-game.not-ready {
+    pointer-events: none;
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.battle-ships .layout .start-game.not-active {
+    display: none;
+}
+
+
+.battle-ships .layout .button-style-hover:hover {
+    color: #656cda;
+    transition: 100ms;
+}
+
+
+.battle-ships .layout .clouds {
+    position: absolute;
+    background: url("../images/clouds.png");
+    height: 518px;
+    width: 852px;
+    left: 132px;
+    top: 15px;
+}
+
+
+.battle-ships .layout .cube {
+    position: absolute;
+    top: 185px;
+    left: 426px;
+    background: url("../images/cube-img.png") no-repeat;
+    width: 649px;
+    height: 674px;
+}
+
+.battle-ships .layout .grid-block {
+    padding-left: 542px;
+    padding-top: 87px;
+}
+
+.battle-ships .layout .grid {
+    color: white;
+    width: 409px;
+    border-collapse: collapse;
+    transform-style: preserve-3d;
+    transform: rotateZ(63deg) rotateX(47deg) rotateY(-45deg);
+    z-index: 7000;
+}
+
+.battle-ships .layout .grid .activate {
+    box-shadow: white 0 0 9px;
+}
+
+
+.battle-ships .layout .grid td {
+    border: 1px solid rgba(255, 255, 255, .6);
+    height: 49px;
+    cursor: pointer;
+}
+
+.battle-ships .layout .grid .selected-grid-cell {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/*.battle-ships .layout .grid td:hover::before {
+    content: '';
+    position: absolute;
+    background: url(../images/target.png);
+    height: 37px;
+    width: 67px;
+    pointer-events: none;
+    right: 0;
+    bottom: 20px;
+    transform-style: preserve-3d;
+    transform: rotateZ(-49deg) rotateX(-45deg);
+}*/
+
+.battle-ships .layout .row-grid {
+    font-family: 'PT Sans', 'sans-serif';
+    font-size: 12px;
+    color: rgba(255, 255, 255, .6);
+    display: flex;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.battle-ships .layout .row-grid .selected-row {
+    color: white;
+    font-weight: bold;
+}
+
+.battle-ships .layout .row-grid.letters {
+    transform: rotateZ(63deg) rotateX(48deg) rotateY(-44deg);
+    left: 727px;
+    top: 238px;
+}
+
+.battle-ships .layout .row-grid.nums {
+    transform: rotate(-27deg);
+    left: 410px;
+    top: 235px;
+}
+
+.battle-ships .layout .row-grid .cell {
+    transform-style: preserve-3d;
+}
+
+
+.battle-ships .layout .row-grid.letters .cell-letter {
+    padding-right: 34px;
+    transform: rotateZ(-50deg) rotateX(-60deg) rotateY(-10deg)
+}
+
+.battle-ships .layout .row-grid.nums .cell-num {
+    padding-right: 29px;
+    transform: rotateZ(24deg)
+}
+
+
+/* ------------------------------------------------------------- */
+
+/* верхняя строка (sea battle, пригласить к битве, ссылка) */
+.battle-ships .layout .row {
+    margin-left: 21px;
+    padding-top: 28px;
+    display: flex;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+}
+
+.battle-ships .layout .row .title {
+    background: url("../images/title.png");
+    width: 188px;
+    height: 44px;
+}
+
+.battle-ships .layout .row .invite-block {
+    font-size: 14px;
+    font-family: Arial, 'monospace';
+    color: white;
+    align-items: center;
+    padding-bottom: 18px;
+    display: flex;
+    position: absolute;
+    left: 434px;
+}
+
+.battle-ships .layout .row .invite-block .invite-space {
+    padding-right: 20px;
+    width: 130px;
+}
+
+.battle-ships .layout .row .invite-block .invite-image {
+    background: url("../images/sea_link.svg") no-repeat;
+    width: 29px;
+    height: 29px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-right: 20px;
+}
+
+.battle-ships .layout .row .invite-block .invite-image:hover {
+    border: 3px rgba(255, 255, 255, 0) solid;
+}
+
+.battle-ships .layout .row .invite-block .invite-block-a {
+    border-bottom: 1px dotted #0099CC;
+}
+
+.battle-ships .layout .row .invite-block .invite-block-a .invite-a {
+    text-decoration: none;
+    text-underline: none;
+    padding-bottom: 2px;
+    font-size: 15px;
+    color: #0099CC;
+    display: block;
+}
+
+/* --------------------------------------- */
+
+
+.battle-ships .timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: wheat;
+    opacity: .5;
+}
+
+/* ------------------- блок кораблей -------------------- */
+
+.battle-ships .layout  .ship {
+    position: absolute;
+    left: 122px;
+    cursor: move;
+    z-index: 9999;
+}
+
+.battle-ships .layout  .ship.rotate {
+    transform: scale(-1, 1);
+}
+
+/* четырехпалубник */
+.battle-ships .layout  .ship.ship0 {
+    top: 180px;
+}
+
+/* трехпалубники */
+.battle-ships .layout  .ship.ship1 {
+    top: 334px;
+}
+
+.battle-ships .layout  .ship.ship2 {
+    top: 334px;
+    left: 224px;
+
+}
+/* --------------- */
+
+
+/* двухпалубники */
+.battle-ships .layout  .ship.ship3 {
+    top: 448px;
+}
+
+.battle-ships .layout  .ship.ship4 {
+    top: 448px;
+    left: 193px;
+}
+
+.battle-ships .layout  .ship.ship5 {
+    top: 448px;
+    left: 266px;
+}
+/* -------------- */
+
+/* однопалубники */
+.battle-ships .layout  .ship.ship6 {
+    top: 545px;
+}
+
+.battle-ships .layout  .ship.ship7 {
+    top: 545px;
+    left: 174px;
+}
+
+.battle-ships .layout  .ship.ship8 {
+    top: 545px;
+    left: 224px;
+}
+
+.battle-ships .layout  .ship.ship9 {
+    top: 545px;
+    left: 276px;
+}
+
+
+/* ------------------ блок для выделения кораблей ------------------ */
+
+.battle-ships .layout .battleground-block {
+    position: absolute;
+    height: 444px;
+    width: 444px;
+    top: 90px;
+    left: 535px;
+    perspective: 800px;
+    -webkit-perspective: 800px;
+}
+
+.battle-ships .layout .battleground-block .battleground {
+    height: inherit;
+    width: inherit;
+    transform-style: preserve-3d;
+    transform: rotateZ(65deg) rotateX(45deg) rotateY(-45deg);
+}
+
+
+.battle-ships .layout .battleground-block .a-line{}
+
+
+/* ------------- блок действий ------------- */
+.battle-ships .layout .action-row {
+    font-family: 'PT Sans', 'sans-serif';
+    position: absolute;
+    left: 0;
+    height: 100px;
+    top: 708px;
+    padding-left: 60px;
+    display: flex;
+    font-size: 14px;
+    color: white;
+    z-index: 9;
+}
+
+.battle-ships .layout .action-row .action-block {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.battle-ships .layout .action-row .action-block:hover .action-image {
+    transform: rotate(360deg);
+    transition: 1200ms;
+}
+
+
+.battle-ships .layout .action-row .action-block .action-text {
+    margin-right: 52px;
+}
+
+.battle-ships .layout .action-row .action-block .action-text.text-underline {
+    border-bottom: dashed white 1px;
+    padding-right: 2px;
+}
+
+.battle-ships .layout .action-row .action-block .action-image {
+    width: 26px;
+    height: 26px;
+    margin-right: 28px;
+}
+
+.battle-ships .layout .action-row .action-block .action-image.drag {
+    background: url("../images/sea_drag.svg") no-repeat;
+}
+
+.battle-ships .layout .action-row .action-block .action-image.rotate {
+    background: url("../images/sea_rotate.svg") no-repeat;
+}
+
+.battle-ships .layout .action-row .action-block .action-image.clear {
+    background: url("../images/sea_clear.svg") no-repeat;
+    height: 35px;
+}
+
+.battle-ships .layout .action-row .action-block .action-image.random {
+    background: url("../images/sea_random.svg") no-repeat;
+    width: 33px;
+    height: 33px;
+    padding-top: -4px;
+}
+

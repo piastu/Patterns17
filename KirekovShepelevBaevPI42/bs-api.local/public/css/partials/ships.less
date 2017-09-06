@@ -1,0 +1,124 @@
+@import "../_var";
+
+.ship {
+    display: inline-block;
+    position: relative;
+
+    &.ship-1-r {
+        .icon(@ship-1-r);
+    }
+
+    &.ship-1-l {
+        .icon(@ship-1-r);
+        transform: scale(-1, 1);
+    }
+
+    &.ship-2-r {
+        .icon(@ship-2-r);
+    }
+
+    &.ship-2-l {
+        .icon(@ship-2-r);
+        transform: scale(-1, 1);
+    }
+
+    &.ship-3-r {
+        .icon(@ship-3-r);
+    }
+
+    &.ship-3-l {
+        .icon(@ship-3-r);
+        transform: scale(-1, 1);
+    }
+
+    &.ship-4-r {
+        .icon(@ship-4-r);
+    }
+
+    &.ship-4-l {
+        .icon(@ship-4-r);
+        transform: scale(-1, 1);
+    }
+
+    &.used {
+        opacity: 0.5;
+    }
+
+    &.process {
+        opacity: 0.3;
+    }
+}
+
+.cell {
+    .ship-1-l {
+        margin: 7px 0 0 -1px;
+    }
+    .ship-1-r {
+        margin: 7px 0 0 -1px;
+    }
+
+    .ship-2-l {
+        margin: 2px 0 0 -29px;
+    }
+    .ship-2-r {
+        margin: 3px 0 0 2px;
+    }
+
+    .ship-3-l {
+        margin: -1px 0 0 -58px;
+    }
+    .ship-3-r {
+        margin: -1px 0 0 2px;
+    }
+
+    .ship-4-l {
+        margin: -27px 0 0 -102px;
+    }
+    .ship-4-r {
+        margin: -25px 0 0 5px;
+    }
+}
+
+.sprite-place {
+    span {
+        display: block;
+    }
+
+    .empty {
+        .icon(@miss);
+    }
+
+    .miss {
+        .size(8px);
+        margin: 17px 0 0 18px;
+        border-radius: 50%;
+        background: #000;
+    }
+
+    .hit {
+        .icon(@explode);
+        margin: -34px 0 0 -2px;
+    }
+
+    .tooltip {
+        position: absolute;
+        min-width: 70px;
+        top: -27px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #0f1a1d;
+        text-align: center;
+        font: bold 12px/27px @font;
+
+        &:after {
+            .pseudo();
+            .size(0);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            border-top: 6px solid #0f1a1d;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+        }
+    }
+}

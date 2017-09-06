@@ -1,0 +1,48 @@
+@import "../_var";
+
+/**
+ * Header
+ **/
+.header {
+    display: flex;
+    height: @headerHeight;
+    padding: 0 19px 0 22px;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        .icon(@logo);
+        margin: 0 0 -20px;
+    }
+
+    .share {
+        display: flex;
+        align-items: center;
+        font: 15px/15px @font;
+
+        .copy {
+            .icon(@copy-icon);
+            border: 0;
+            margin-left: 20px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .link {
+            margin-left: 20px;
+            color: #09c;
+            border-bottom: 1px dashed #09c;
+
+            /*
+            cursor: pointer;
+
+            &:hover {
+                border-color: transparent;
+            }
+            */
+        }
+    }
+}

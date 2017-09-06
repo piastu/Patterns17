@@ -1,0 +1,117 @@
+@import "../_var";
+
+@cellSize: 30px;
+@cells: 10;
+
+.battle-cube {
+    position: relative;
+    width: @cubeWidth;
+    height: @cubeHeight;
+    background: url('@{imagePath}cube.png') 50% 50% no-repeat;
+    padding-top: 1px;
+
+
+    .line {
+        position: absolute;
+        top: 50px;
+        width: 50%;
+        display: flex;
+        box-sizing: border-box;
+        font: bold 11px/11px @font;
+        color: #6f8392;
+
+        &.numbers {
+            left: 0;
+            transform: skewY(-27deg);
+            flex-direction: row-reverse;
+            padding-right: 10px;
+
+            span {
+                transform: skewY(27deg);
+            }
+        }
+
+        &.letters {
+            right: 0;
+            transform: skewY(27deg);
+            padding-left: 10px;
+
+            span {
+                transform: skewY(-27deg);
+            }
+        }
+
+        span {
+            display: inline-block;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+
+    .field-container {
+        .size(450px, 0);
+        position: relative;
+        margin: -64px auto 0;
+    }
+
+    .field {
+        .size(450px, 450px);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translateZ(1000px) rotateX(60deg) rotateZ(45deg);
+        transform-style: preserve-3d;
+        margin: 0 auto;
+
+        .row {
+            display: flex;
+            flex: 1 0 0;
+            box-sizing: border-box;
+
+            &:not(:first-child) {
+                border-top: 1px solid rgba(255, 255, 255, 0.46);
+            }
+        }
+
+        .cell {
+            position: relative;
+            flex: 1 0 0;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+
+            .sprite-place {
+                .size(100%);
+                position: absolute;
+                z-index: 10;
+                transform: rotateZ(-45deg) rotateX(-60deg);
+            }
+
+            &:not(:first-child) {
+                border-left: 1px solid rgba(255, 255, 255, 0.46);
+            }
+
+            &.black {
+                background: #091a20;
+            }
+
+            &.hovered {
+                background: rgba(9, 26, 32, 0.3);
+            }
+
+            &.selection-row {
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            .selection {
+                .icon(@selection);
+                position: absolute;
+                display: block;
+                transform: translateZ(7px);
+            }
+        }
+    }
+
+    .field-overlay {
+        z-index: 1;
+    }
+}

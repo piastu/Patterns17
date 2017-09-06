@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/libs/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-game.css">
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="js/classes.js"></script>
+    <script defer src="js/game.js"></script>
+    <title>Title</title>
+</head>
+<body class="battle-ships">
+
+<div class="layout">
+
+    <div class="row">
+        <div class="title"></div>
+        <div class="invite-block">
+            <div class="invite-space">
+                Пригласить к битве
+            </div>
+            <div class="invite-image invite-space"></div>
+            <div class="invite-block-a">
+                <a class="invite-a" href="http://sibirix.ru/seabattle/783468" target="_blank">http://sibirix.ru/seabattle/783468</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="clouds"></div>
+    <div class="light-blue-back"></div>
+    <div class="blue-back"></div>
+
+    <div class="rocket left-rocket"></div>
+    <div class="rocket right-rocket"></div>
+
+    <div class="cube cube-player"></div>
+    <div class="cube cube-enemy"></div>
+
+    <div class="drowned-ship drowned-ship-left"></div>
+    <div class="drowned-ship drowned-ship-right"></div>
+
+
+    <!-- поле игрока -->
+    <div class="grid-block grid-block-player">
+
+        <!-- буквы -->
+        <div class="row-grid letters" id="rowGridLettersPlayer">
+            <div class="cell cell-letter">А</div>
+            <div class="cell cell-letter">Б</div>
+            <div class="cell cell-letter">В</div>
+            <div class="cell cell-letter">Г</div>
+            <div class="cell cell-letter">Д</div>
+            <div class="cell cell-letter">Е</div>
+            <div class="cell cell-letter">Ж</div>
+            <div class="cell cell-letter">З</div>
+            <div class="cell cell-letter">И</div>
+            <div class="cell cell-letter">К</div>
+        </div>
+
+        <!-- числа -->
+        <div class="row-grid nums" id="rowGridNumsPlayer">
+            <div class="cell cell-num">10</div>
+            <div class="cell cell-num">9</div>
+            <div class="cell cell-num">8</div>
+            <div class="cell cell-num">7</div>
+            <div class="cell cell-num">6</div>
+            <div class="cell cell-num">5</div>
+            <div class="cell cell-num">4</div>
+            <div class="cell cell-num">3</div>
+            <div class="cell cell-num">2</div>
+            <div class="cell cell-num">1</div>
+        </div>
+
+        <table class="grid" id="tablePlayer">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- поле противника -->
+    <div id="fldspf" class="grid-block grid-block-enemy">
+
+        <!-- буквы -->
+        <div class="row-grid letters" id="rowGridLettersEnemy">
+            <div class="cell cell-letter">А</div>
+            <div class="cell cell-letter">Б</div>
+            <div class="cell cell-letter">В</div>
+            <div class="cell cell-letter">Г</div>
+            <div class="cell cell-letter">Д</div>
+            <div class="cell cell-letter">Е</div>
+            <div class="cell cell-letter">Ж</div>
+            <div class="cell cell-letter">З</div>
+            <div class="cell cell-letter">И</div>
+            <div class="cell cell-letter">К</div>
+        </div>
+
+        <!-- числа -->
+        <div class="row-grid nums" id="rowGridNumsEnemy">
+            <div class="cell cell-num">10</div>
+            <div class="cell cell-num">9</div>
+            <div class="cell cell-num">8</div>
+            <div class="cell cell-num">7</div>
+            <div class="cell cell-num">6</div>
+            <div class="cell cell-num">5</div>
+            <div class="cell cell-num">4</div>
+            <div class="cell cell-num">3</div>
+            <div class="cell cell-num">2</div>
+            <div class="cell cell-num">1</div>
+        </div>
+
+        <table class="grid" id="tableEnemy">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- здоровье игрока -->
+    <div class="score-block score-block-player">
+        <div class="score score-player">
+            Твой флот <small>повреждения 0%</small>
+        </div>
+        <div class="health-block">
+
+            <!-- четырехпалубник -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- трехпалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- двухпалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- однопалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- здоровье противника -->
+    <div class="score-block score-block-enemy">
+        <div class="score">
+            Флот врага
+            <small>повреждения 0%</small>
+        </div>
+        <div class="health-block">
+
+            <!-- четырехпалубник -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- трехпалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- двухпалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+            <!-- однопалубники -->
+            <div class="health-row">
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+
+                <div class="health-bar">
+                    <div class="health-cell active"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- твой ход -->
+    <div class="turn">—Твой ход, тысяча чертей!</div>
+
+    <!-- ход противника -->
+    <div class="turn">—Ход противника!</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+@import "../_var";
+
+.placement-page {
+    user-select: none;
+
+    .share .link {
+        user-select: initial;
+    }
+
+    .field {
+        .hidden {
+            &:after {
+                content: '';
+            }
+        }
+    }
+
+    .centered {
+        position: relative;
+        height: ~'calc(100vh - @{headerHeight})';
+        min-height: @cubeHeight;
+    }
+
+
+    .battle-cube {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -1 * (@cubeWidth / 2) + 47px;
+        margin-top: -1 * (@cubeHeight / 2) - 15px;
+
+        /*
+        .cell:hover {
+            .ship {
+                opacity: 0.5;
+            }
+        }
+        */
+    }
+
+    .ships-panel {
+        position: absolute;
+        z-index: 20;
+        left: 20px;
+        top: 50px;
+        padding-top: 46px;
+
+        .row {
+            padding-bottom: 48px;
+        }
+    }
+
+    .btn {
+        position: relative;
+        z-index: 10;
+        top: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .controls {
+        position: relative;
+        top: 603px;
+        height: 28px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 80px 0 26px;
+        align-items: center;
+        font: 14px/20px @font;
+
+        > div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 56px;
+
+            &:before {
+                .pseudo();
+                left: 0;
+                top: -2px;
+            }
+
+
+            &:hover {
+                span {
+                    border-color: transparent;
+                }
+            }
+        }
+
+        span {
+            display: inline-block;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .move {
+            &:before {
+                .icon(@ico-move);
+            }
+        }
+
+        .click {
+            &:before {
+                .icon(@ico-rotate);
+            }
+        }
+
+        .random {
+            cursor: pointer;
+
+            &:before {
+                .icon(@ico-random);
+            }
+        }
+
+        .clear {
+            cursor: pointer;
+
+            &:before {
+                .icon(@ico-clear);
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@copy-icon: 'copy-icon' '../images/sprite.png?0c1745fc' -157px -108px 29px 29px false;
+@explode: 'explode' '../images/sprite.png?0c1745fc' -102px -108px 53px 62px false;
+@ico-clear: 'ico-clear' '../images/sprite.png?0c1745fc' -276px -108px 21px 26px false;
+@ico-move: 'ico-move' '../images/sprite.png?0c1745fc' -188px -108px 28px 28px false;
+@ico-random: 'ico-random' '../images/sprite.png?0c1745fc' -218px -108px 29px 27px false;
+@ico-rotate: 'ico-rotate' '../images/sprite.png?0c1745fc' -249px -108px 25px 26px false;
+@logo: 'logo' '../images/sprite.png?0c1745fc' -145px 0px 188px 44px false;
+@miss: 'miss' '../images/sprite.png?0c1745fc' 0px -173px 66px 77px false;
+@selection: 'selection' '../images/sprite.png?0c1745fc' -220px -46px 45px 45px false;
+@ship-1-r: 'ship-1-r' '../images/sprite.png?0c1745fc' -267px -46px 44px 24px false;
+@ship-2-r: 'ship-2-r' '../images/sprite.png?0c1745fc' -145px -46px 73px 47px false;
+@ship-3-r: 'ship-3-r' '../images/sprite.png?0c1745fc' 0px -108px 100px 63px false;
+@ship-4-r: 'ship-4-r' '../images/sprite.png?0c1745fc' 0px 0px 143px 106px false;
+
+
+.icon(@icon) {
+    width: extract(@icon, 5);
+    height: extract(@icon, 6);
+
+    @sprite-image: extract(@icon, 2);
+    @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+    background: url(@sprite-image-bare) extract(@icon, 3) extract(@icon, 4) no-repeat;
+
+    //noinspection LessUnresolvedVariable
+    .retinize() when (extract(@icon, 7) = true) {
+        @media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {
+            @name: extract(@icon, 1);
+            @var: "@{name}-2x";
+            background-size: 166.5px 125px;
+
+            @sprite-offset-x: extract(@@var, 3);
+            @sprite-offset-y: extract(@@var, 4);
+            background-position: @sprite-offset-x/2px @sprite-offset-y/2px;
+        }
+    }
+
+    .retinize();
+}

@@ -1,0 +1,78 @@
+@import "../_var";
+
+.game-page {
+    .battle-cube {
+        position: absolute;
+
+        &.field-my {
+            top: 3px;
+            left: 0;
+        }
+
+        &.field-enemy {
+            right: 0;
+            top: 96px;
+        }
+    }
+
+    .red {
+        color: red
+    }
+
+    .green {
+        color: green;
+    }
+
+    .spacer {
+        height: 375px;
+    }
+
+    .damage {
+        position: relative;
+        display: flex;
+        height: 207px;
+
+        .damage-col {
+            widtH: 557px;
+        }
+
+        .title {
+            font: bold 24px/32px @font;
+
+            span {
+                font: 14px/32px @font;
+            }
+        }
+    }
+
+    .ships-damage {
+        font-size: 0;
+        padding-top: 16px;
+
+        .row {
+            height: 17px;
+            margin-bottom: 10px;
+        }
+
+        .ship-dmg {
+            float: left;
+            margin-right: 18px;
+
+            i {
+                .size(22px, 17px);
+                background: #fff;
+                float: left;
+                margin-left: 2px;
+
+                &.hit {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+
+    .chat {
+        position: relative;
+        z-index: 40;
+    }
+}

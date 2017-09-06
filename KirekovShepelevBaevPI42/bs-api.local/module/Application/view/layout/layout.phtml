@@ -1,0 +1,61 @@
+<? /* @var Zend\View\Renderer\PhpRenderer $this */
+global $pageType;
+?>
+<?= $this->doctype() ?>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <?= $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ->appendName('cmsmagazine', '2c2951bb57cffc1481be768a629d3a6e')
+        ->appendName('format-detection', 'telephone=no')
+        ->appendName('SKYPE_TOOLBAR', 'SKYPE_TOOLBAR_PARSER_COMPATIBLE')
+        ->appendName('description', '')
+    ?>
+
+    <?= $this->headTitle('Морской бой')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+    <?= $this
+        ->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/favicon.ico'])
+        ->headLink(['rel' => 'stylesheet', 'type' => 'image/vnd.microsoft.icon', 'href' => 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'])
+        ->prependStylesheet($this->basePath('css/style.css'));
+    ?>
+    <?= $this->headScript()
+        ->appendFile($this->basePath('js/libs/jquery.min.js'))
+        ->appendFile($this->basePath('js/libs/jquery-ui.min.js'))
+        ->appendFile($this->basePath('js/libs/can.custom.min.js'))
+        ->appendFile($this->basePath('js/libs/baron.min.js'))
+        ->appendFile($this->basePath('js/-pre-init.js'))
+        ->appendFile($this->basePath('js/helpers.js'))
+        ->appendFile($this->basePath('js/controllers/partial/chat.js'))
+        ->appendFile($this->basePath('js/controllers/page/main.js'))
+        ->appendFile($this->basePath('js/controllers/page/placement.js'))
+        ->appendFile($this->basePath('js/controllers/page/game.js'))
+        ->appendFile($this->basePath('js/application.js'))
+    ?>
+
+</head>
+<body data-page-type="<?= $pageType ?>" class="<?= $pageType ?>-page">
+
+<div class="clouds-container">
+    <div class="clouds"></div>
+</div>
+
+<div class="container">
+    <div class="header">
+        <a href="/" class="logo"></a>
+        <div class="share" style="display:none">
+            <span>Пригласить к битве</span>
+            <button class="copy js-copy" title="Копировать ссылку в буфер обмена"></button>
+            <span class="link" title="Скопируйте ссылку и отправьте оппоненту"></span>
+        </div>
+    </div>
+
+    <?= $this->content ?>
+</div>
+
+<?= $this->inlineScript() ?>
+
+</body>
+</html>

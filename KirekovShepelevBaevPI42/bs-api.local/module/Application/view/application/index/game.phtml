@@ -1,0 +1,31 @@
+<div class="content-container">
+    <?= $this->battleCube()->render('field-my js-field-my'); ?>
+    <?= $this->battleCube()->render('field-enemy js-field-enemy', true); ?>
+
+    <div class="spacer"></div>
+    <div class="damage">
+        <div class="damage-col js-damage-my">
+            <div class="title">
+                Твой флот <span>повреждения <span class="js-percent">0</span>%</span>
+            </div>
+            <?= $this->shipsDamage()->render(); ?>
+        </div>
+
+        <div class="damage-col js-damage-enemy">
+            <div class="title">
+                Флот врага <span>повреждения <span class="js-percent">0</span>%</span>
+            </div>
+            <?= $this->shipsDamage()->render(); ?>
+        </div>
+    </div>
+
+    <div class="chat js-chat">
+        <div class="messages-container">
+            <div class="messages"></div>
+        </div>
+        <div class="input-row">
+            <input class="message js-input" maxlength="250" placeholder="Написать в чат">
+            <button class="btn js-submit">ОТПРАВИТЬ</button>
+        </div>
+    </div>
+</div>

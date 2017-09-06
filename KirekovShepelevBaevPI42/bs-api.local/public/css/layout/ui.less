@@ -1,0 +1,43 @@
+@import "../_var";
+
+/**
+ * Buttons
+ */
+
+.btn {
+    .transit();
+    display: inline-block;
+    height: 44px;
+    padding: 0 30px;
+    text-align: center;
+    font: bold 14px/44px @font;
+    background: @cYellow;
+    border: 0;
+    box-shadow: 0 0 0 @cYellow, 0 0 0 @cYellow;
+    cursor: pointer;
+
+    &[disabled],
+    &.disabled {
+        cursor: default;
+        opacity: 0.5;
+        background: #999;
+        color: #000;
+
+        &:hover {
+            box-shadow: 0 0 0 @cYellow, 0 0 0 @cYellow;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 -3px 0 @cYellow, 0 3px 0 @cYellow;
+    }
+
+    &.big {
+        height: 57px;
+        padding: 0 18px;
+        font: bold 24px/57px @font;
+    }
+}
+/**
+ * Inputs
+ */

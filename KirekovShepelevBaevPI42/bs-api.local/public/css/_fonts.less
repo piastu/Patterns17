@@ -1,0 +1,19 @@
+@import "_var";
+
+/****
+ * Миксины, разное
+ ****/
+
+.font(@name, @fname, @weight: normal, @style: normal) {
+    @font-face {
+        font-family: @name;
+        src: url('@{fontPath}@{fname}.woff2') format('woff2'),
+             url('@{fontPath}@{fname}.woff') format('woff');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+// Пример указания шрифта
+// .font(@font, 'filename-here', 400);
+// Рекомендуется использовать названия шрифтов из переменных из _var.less

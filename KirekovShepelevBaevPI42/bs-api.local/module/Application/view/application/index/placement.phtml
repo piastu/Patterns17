@@ -1,0 +1,34 @@
+<div class="centered">
+    <div class="ships-panel">
+        <div class="row">
+            <div class="ship ship-4-r" data-orientation="horizontal" data-type="4-1"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-3-r" data-orientation="horizontal" data-type="3-1"></div>
+            <div class="ship ship-3-r" data-orientation="horizontal" data-type="3-2"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-2-r" data-orientation="horizontal" data-type="2-1"></div>
+            <div class="ship ship-2-r" data-orientation="horizontal" data-type="2-2"></div>
+            <div class="ship ship-2-r" data-orientation="horizontal" data-type="2-3"></div>
+        </div>
+        <div class="row">
+            <div class="ship ship-1-r" data-orientation="horizontal" data-type="1-1"></div>
+            <div class="ship ship-1-r" data-orientation="horizontal" data-type="1-2"></div>
+            <div class="ship ship-1-r" data-orientation="horizontal" data-type="1-3"></div>
+            <div class="ship ship-1-r" data-orientation="horizontal" data-type="1-4"></div>
+        </div>
+    </div>
+
+    <?= $this->battleCube()->render('js-field'); ?>
+
+    <button class="btn big js-ready" disabled>— Все готово, адмирал! Начать игру!</button>
+    <button class="btn big js-wait" style="display:none" disabled>— Ждём готовности противника!</button>
+
+    <div class="controls">
+        <div class="move">Мышью перетаскивай корабли на поле</div>
+        <div class="click">Кликай для поворота корабля</div>
+        <div class="random js-random"><span>Расставить в случайном порядке</span></div>
+        <div class="clear js-clear"><span>С глаз долой!</span></div>
+    </div>
+</div>

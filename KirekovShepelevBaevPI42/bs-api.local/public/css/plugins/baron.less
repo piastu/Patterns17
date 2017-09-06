@@ -1,0 +1,24 @@
+@import "../_var";
+
+.baron_bar_v {
+    display: none;
+}
+
+._scrollbar {
+    + .baron_bar_v {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        bottom: 10px;
+        width: 4px;
+        z-index: 1;
+        background: #343435;
+
+        .main__bar {
+            background: #fff;
+            z-index: 1;
+            position: relative;
+        }
+    }
+}
