@@ -1,4 +1,4 @@
-package cw;
+п»їpackage cw;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -18,7 +18,7 @@ import cw.model.Herbal;
 import cw.model.Patient;
 import cw.model.Tincture;
 
-// Класс для работы с диалогами открытия/сохранения файла и файловой системой
+// РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РґРёР°Р»РѕРіР°РјРё РѕС‚РєСЂС‹С‚РёСЏ/СЃРѕС…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»Р° Рё С„Р°Р№Р»РѕРІРѕР№ СЃРёСЃС‚РµРјРѕР№
 public class FileIO {
 	
 	private final JFileChooser chooser;

@@ -1,4 +1,4 @@
-package cw.gui;
+п»їpackage cw.gui;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import cw.Main;
 import cw.model.AbstractMeans;
 
-// Класс "полок" для хранения методов решения
+// РљР»Р°СЃСЃ "РїРѕР»РѕРє" РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РјРµС‚РѕРґРѕРІ СЂРµС€РµРЅРёСЏ
 @SuppressWarnings("serial")
 public class Shelves extends JPanel {
 	

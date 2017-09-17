@@ -1,4 +1,4 @@
-package cw;
+п»їpackage cw;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import javax.swing.UIManager;
 import cw.gui.MainFrame;
 import cw.model.AbstractMeans;
 
-// Основной класс, содержит точку входа и основные объекты программы
+// РћСЃРЅРѕРІРЅРѕР№ РєР»Р°СЃСЃ, СЃРѕРґРµСЂР¶РёС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° Рё РѕСЃРЅРѕРІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РїСЂРѕРіСЂР°РјРјС‹
 public class Main {
 	
 	private static MainFrame mainFrame;

@@ -1,4 +1,4 @@
-package cw.model;
+п»їpackage cw.model;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -15,10 +15,10 @@ import cw.gui.form.FieldData;
 import cw.gui.form.IEditable;
 import cw.gui.form.FieldData.Type;
 
-// Класс, описывающий пациента
+// РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РїР°С†РёРµРЅС‚Р°
 public class Patient implements IEditable, ISaveable {
 	
-	private static final String[] results = new String[]{ "Неизвестно", "Положительные", "Отрицательные" };
+	private static final String[] results = new String[]{ "РќРµРёР·РІРµСЃС‚РЅРѕ", "РџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ", "РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ" };
 	
 	private String surname = null, name = null, patronymic = null, notes = null;
 	private Date birthday = null, time = null;
@@ -49,14 +49,14 @@ public class Patient implements IEditable, ISaveable {
 	
 	@Override
 	public void addFormFields(List<FieldData> list) {
-		list.add(new FieldData("surname",    "Фамилия",       Type.STRING,        false, surname));
-		list.add(new FieldData("name",       "Имя",           Type.STRING,        false, name));
-		list.add(new FieldData("patronymic", "Отчество",      Type.STRING,        false, patronymic));
-		list.add(new FieldData("birthday",   "Дата рождения", Type.DATE,          false, birthday));
-		list.add(new FieldData("time",       "Время приёма",  Type.TIME,          false, time));
-		list.add(new FieldData("diseases",   "Заболевания",   Type.MULTI_SELECT,  false, getSelectedDiseases(), Main.getMainFrame().getDiseasesAsList()));
-		list.add(new FieldData("result",     "Результаты",    Type.SINGLE_SELECT, false, result, Arrays.asList(results)));
-		list.add(new FieldData("notes",      "Примечания",    Type.TEXT,          true,  notes));
+		list.add(new FieldData("surname",    "Р¤Р°РјРёР»РёСЏ",       Type.STRING,        false, surname));
+		list.add(new FieldData("name",       "РРјСЏ",           Type.STRING,        false, name));
+		list.add(new FieldData("patronymic", "РћС‚С‡РµСЃС‚РІРѕ",      Type.STRING,        false, patronymic));
+		list.add(new FieldData("birthday",   "Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ", Type.DATE,          false, birthday));
+		list.add(new FieldData("time",       "Р’СЂРµРјСЏ РїСЂРёС‘РјР°",  Type.TIME,          false, time));
+		list.add(new FieldData("diseases",   "Р—Р°Р±РѕР»РµРІР°РЅРёСЏ",   Type.MULTI_SELECT,  false, getSelectedDiseases(), Main.getMainFrame().getDiseasesAsList()));
+		list.add(new FieldData("result",     "Р РµР·СѓР»СЊС‚Р°С‚С‹",    Type.SINGLE_SELECT, false, result, Arrays.asList(results)));
+		list.add(new FieldData("notes",      "РџСЂРёРјРµС‡Р°РЅРёСЏ",    Type.TEXT,          true,  notes));
 	}
 
 	@Override

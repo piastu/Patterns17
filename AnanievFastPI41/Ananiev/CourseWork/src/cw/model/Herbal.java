@@ -1,4 +1,4 @@
-package cw.model;
+п»їpackage cw.model;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -9,7 +9,7 @@ import java.util.Random;
 import cw.gui.form.FieldData;
 import cw.gui.form.FieldData.Type;
 
-// Класс, описывающий травяной сбор
+// РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ С‚СЂР°РІСЏРЅРѕР№ СЃР±РѕСЂ
 public class Herbal extends AbstractMeans {
 	
 	private int weight = 0;
@@ -23,8 +23,8 @@ public class Herbal extends AbstractMeans {
 	@Override
 	public void addFormFields(List<FieldData> list) {
 		super.addFormFields(list);
-		list.add(new FieldData("weight",      "Вес (гр)",     Type.INT,  false, weight));
-		list.add(new FieldData("composition", "Составляющие", Type.TEXT, false, composition));
+		list.add(new FieldData("weight",      "Р’РµСЃ (РіСЂ)",     Type.INT,  false, weight));
+		list.add(new FieldData("composition", "РЎРѕСЃС‚Р°РІР»СЏСЋС‰РёРµ", Type.TEXT, false, composition));
 	}
 
 	@Override

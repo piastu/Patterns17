@@ -1,4 +1,4 @@
-package cw.model;
+п»їpackage cw.model;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -11,7 +11,7 @@ import cw.gui.form.FieldData;
 import cw.gui.form.IEditable;
 import cw.gui.form.FieldData.Type;
 
-// Абстрактный класс, описывающий способ лечения
+// РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ СЃРїРѕСЃРѕР± Р»РµС‡РµРЅРёСЏ
 public abstract class AbstractMeans implements IEditable, ISaveable {
 	
 	private static int maxId = 0;
@@ -59,8 +59,8 @@ public abstract class AbstractMeans implements IEditable, ISaveable {
 	
 	@Override
 	public void addFormFields(List<FieldData> list) {
-		list.add(new FieldData("name",        "Название",   Type.STRING, false, name));
-		list.add(new FieldData("instruction", "Инструкция", Type.TEXT,   false, instruction));
+		list.add(new FieldData("name",        "РќР°Р·РІР°РЅРёРµ",   Type.STRING, false, name));
+		list.add(new FieldData("instruction", "РРЅСЃС‚СЂСѓРєС†РёСЏ", Type.TEXT,   false, instruction));
 	}
 	
 	@Override

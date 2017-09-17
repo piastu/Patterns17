@@ -1,9 +1,9 @@
-package cw.gui.form;
+п»їpackage cw.gui.form;
 
 import java.util.HashMap;
 import java.util.List;
 
-// Интерфейс для описания объекта, по которому может быть построена форма
+// РРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РѕРїРёСЃР°РЅРёСЏ РѕР±СЉРµРєС‚Р°, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїРѕСЃС‚СЂРѕРµРЅР° С„РѕСЂРјР°
 public interface IEditable {
 	
 	public void addFormFields(List<FieldData> list);

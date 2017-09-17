@@ -1,9 +1,9 @@
-package cw;
+п»їpackage cw;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
-// Интерфейс для объектов, которые могут быть записаны и прочитаны из файла
+// РРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РѕР±СЉРµРєС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р·Р°РїРёСЃР°РЅС‹ Рё РїСЂРѕС‡РёС‚Р°РЅС‹ РёР· С„Р°Р№Р»Р°
 public interface ISaveable {
 	
 	public void writeToFile(DataOutputStream out) throws Exception;

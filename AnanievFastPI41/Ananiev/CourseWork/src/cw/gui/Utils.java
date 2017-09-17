@@ -1,4 +1,4 @@
-package cw.gui;
+п»їpackage cw.gui;
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 
-// Набор вспомогательных методов для работы с интерфейсом
+// РќР°Р±РѕСЂ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РјРµС‚РѕРґРѕРІ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј
 public class Utils {
 	
 	private static SimpleDateFormat date = new SimpleDateFormat("dd.MM.yyyy");

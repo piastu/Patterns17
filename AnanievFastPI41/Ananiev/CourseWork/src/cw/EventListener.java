@@ -1,4 +1,4 @@
-package cw;
+п»їpackage cw;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ import cw.gui.form.FormBuilder;
 import cw.gui.form.FormBuilder.FormType;
 import cw.model.*;
 
-// Обработчик событий, приходящих от основной формы
+// РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёР№, РїСЂРёС…РѕРґСЏС‰РёС… РѕС‚ РѕСЃРЅРѕРІРЅРѕР№ С„РѕСЂРјС‹
 public class EventListener implements ActionListener {
 
 	@Override
@@ -73,7 +73,7 @@ public class EventListener implements ActionListener {
 					if(Main.getFileIO().readFromFile(load)) {
 						Main.setFile(load);
 					} else {
-						JOptionPane.showMessageDialog(Main.getMainFrame(), "При чтении выбранного файла возникла ошибка!", "Ошибка", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(Main.getMainFrame(), "РџСЂРё С‡С‚РµРЅРёРё РІС‹Р±СЂР°РЅРЅРѕРіРѕ С„Р°Р№Р»Р° РІРѕР·РЅРёРєР»Р° РѕС€РёР±РєР°!", "РћС€РёР±РєР°", JOptionPane.ERROR_MESSAGE);
 					}
 				break;
 			case "work-positive":
@@ -125,8 +125,8 @@ public class EventListener implements ActionListener {
 	
 	public void onCanvasClick(int x, int y) {
 		if(Main.getMeans()[x][y] == null) {
-			String[] options = new String[] {"Травяной сбор", "Настойка"};
-			String selected = (String) JOptionPane.showInputDialog(Main.getMainFrame(), "Выберите тип добавляемого средства", "Добавление средства", 
+			String[] options = new String[] {"РўСЂР°РІСЏРЅРѕР№ СЃР±РѕСЂ", "РќР°СЃС‚РѕР№РєР°"};
+			String selected = (String) JOptionPane.showInputDialog(Main.getMainFrame(), "Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЃСЂРµРґСЃС‚РІР°", "Р”РѕР±Р°РІР»РµРЅРёРµ СЃСЂРµРґСЃС‚РІР°", 
 					JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 			if(selected != null) {
 				AbstractMeans m = null;
@@ -162,7 +162,7 @@ public class EventListener implements ActionListener {
 	}
 	
 	public static boolean confirmDelete() {
-		return JOptionPane.showConfirmDialog(Main.getMainFrame(), "Вы действительно хотите удалить запись?", "Подтверждение", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+		return JOptionPane.showConfirmDialog(Main.getMainFrame(), "Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ?", "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
 	}
 	
 }

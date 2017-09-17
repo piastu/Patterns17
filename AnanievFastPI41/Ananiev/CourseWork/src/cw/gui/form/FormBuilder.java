@@ -1,4 +1,4 @@
-package cw.gui.form;
+п»їpackage cw.gui.form;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -36,7 +36,7 @@ import cw.Main;
 import cw.gui.Utils;
 import cw.gui.form.FieldData.Type;
 
-// Построитель форм на основе переданных от объекта данных
+// РџРѕСЃС‚СЂРѕРёС‚РµР»СЊ С„РѕСЂРј РЅР° РѕСЃРЅРѕРІРµ РїРµСЂРµРґР°РЅРЅС‹С… РѕС‚ РѕР±СЉРµРєС‚Р° РґР°РЅРЅС‹С…
 public class FormBuilder<T extends IEditable> implements ActionListener {
 	
 	public static enum FormType { NEW, EDIT, EDIT_DELETE }
@@ -57,7 +57,7 @@ public class FormBuilder<T extends IEditable> implements ActionListener {
 	}
 	
 	private void createNewDialog() {
-		frame = new JDialog(Main.getMainFrame(), curType != FormType.NEW ? "Редактирование записи" : "Добавление записи", true);
+		frame = new JDialog(Main.getMainFrame(), curType != FormType.NEW ? "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ Р·Р°РїРёСЃРё" : "Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РїРёСЃРё", true);
 		frame.getContentPane().setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.PAGE_AXIS));
 		frame.add(Box.createRigidArea(new Dimension(0, 2)));
 		
@@ -74,7 +74,7 @@ public class FormBuilder<T extends IEditable> implements ActionListener {
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new BoxLayout(buttons, BoxLayout.LINE_AXIS));
 		
-		JButton save = new JButton(curType != FormType.NEW ? "Сохранить" : "Добавить");
+		JButton save = new JButton(curType != FormType.NEW ? "РЎРѕС…СЂР°РЅРёС‚СЊ" : "Р”РѕР±Р°РІРёС‚СЊ");
 		Utils.setFixedSize(save, curType != FormType.EDIT_DELETE ? 100 : 90, 26);
 		save.addActionListener(this);
 		save.setActionCommand("save");
@@ -83,7 +83,7 @@ public class FormBuilder<T extends IEditable> implements ActionListener {
 		buttons.add(Box.createRigidArea(new Dimension(8, 0)));
 		
 		if(curType == FormType.EDIT_DELETE) {
-			JButton delete = new JButton("Удалить");
+			JButton delete = new JButton("РЈРґР°Р»РёС‚СЊ");
 			Utils.setFixedSize(delete, 90, 26);
 			delete.addActionListener(this);
 			delete.setActionCommand("delete");
@@ -92,7 +92,7 @@ public class FormBuilder<T extends IEditable> implements ActionListener {
 			buttons.add(Box.createRigidArea(new Dimension(8, 0)));
 		}
 		
-		JButton cancel = new JButton("Отмена");
+		JButton cancel = new JButton("РћС‚РјРµРЅР°");
 		Utils.setFixedSize(cancel, curType != FormType.EDIT_DELETE ? 100 : 90, 26);
 		cancel.addActionListener(this);
 		cancel.setActionCommand("cancel");

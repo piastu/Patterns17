@@ -1,4 +1,4 @@
-package cw.model;
+п»їpackage cw.model;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -12,7 +12,7 @@ import cw.gui.form.FieldData;
 import cw.gui.form.FieldData.Type;
 import cw.gui.form.IEditable;
 
-// Класс, описывающий болезнь
+// РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ Р±РѕР»РµР·РЅСЊ
 public class Disease implements IEditable, ISaveable {
 	
 	private static int maxId = 0;
@@ -60,10 +60,10 @@ public class Disease implements IEditable, ISaveable {
 	
 	@Override
 	public void addFormFields(List<FieldData> list) {
-		list.add(new FieldData("name",      "Название болезни", Type.STRING,       false, name));
-		list.add(new FieldData("sympthoms", "Симптомы",         Type.TEXT,         false, sympthoms));
-		list.add(new FieldData("effects",   "Последствия",      Type.TEXT,         false, effects));
-		list.add(new FieldData("methods",   "Методы лечения",   Type.MULTI_SELECT, false, getSelectedMeans(), Main.getMeansAsList()));
+		list.add(new FieldData("name",      "РќР°Р·РІР°РЅРёРµ Р±РѕР»РµР·РЅРё", Type.STRING,       false, name));
+		list.add(new FieldData("sympthoms", "РЎРёРјРїС‚РѕРјС‹",         Type.TEXT,         false, sympthoms));
+		list.add(new FieldData("effects",   "РџРѕСЃР»РµРґСЃС‚РІРёСЏ",      Type.TEXT,         false, effects));
+		list.add(new FieldData("methods",   "РњРµС‚РѕРґС‹ Р»РµС‡РµРЅРёСЏ",   Type.MULTI_SELECT, false, getSelectedMeans(), Main.getMeansAsList()));
 	}
 	
 	@Override

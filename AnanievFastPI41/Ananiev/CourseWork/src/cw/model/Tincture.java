@@ -1,4 +1,4 @@
-package cw.model;
+п»їpackage cw.model;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -9,7 +9,7 @@ import java.util.Random;
 import cw.gui.form.FieldData;
 import cw.gui.form.FieldData.Type;
 
-// Класс, описывающий настойку
+// РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ РЅР°СЃС‚РѕР№РєСѓ
 public class Tincture extends AbstractMeans {
 	
 	private int volume = 0;
@@ -23,8 +23,8 @@ public class Tincture extends AbstractMeans {
 	@Override
 	public void addFormFields(List<FieldData> list) {
 		super.addFormFields(list);
-		list.add(new FieldData("volume",     "Объём (мл)",       Type.INT,  false, volume));
-		list.add(new FieldData("conditions", "Условия хранения", Type.TEXT, true,  conditions));
+		list.add(new FieldData("volume",     "РћР±СЉС‘Рј (РјР»)",       Type.INT,  false, volume));
+		list.add(new FieldData("conditions", "РЈСЃР»РѕРІРёСЏ С…СЂР°РЅРµРЅРёСЏ", Type.TEXT, true,  conditions));
 	}
 
 	@Override

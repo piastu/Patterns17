@@ -1,4 +1,4 @@
-package cw.gui;
+п»їpackage cw.gui;
 
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
@@ -34,7 +34,7 @@ import cw.Main;
 import cw.model.Disease;
 import cw.model.Patient;
 
-// Класс основной формы приложения
+// РљР»Р°СЃСЃ РѕСЃРЅРѕРІРЅРѕР№ С„РѕСЂРјС‹ РїСЂРёР»РѕР¶РµРЅРёСЏ
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
 	
@@ -43,7 +43,7 @@ public class MainFrame extends JFrame {
 	private Shelves shelves;
 	
 	public MainFrame() {
-		super("Справочник знахаря");
+		super("РЎРїСЂР°РІРѕС‡РЅРёРє Р·РЅР°С…Р°СЂСЏ");
 		
 		Utils.setFixedSize(this, 650, 405);
 		this.setJMenuBar(createMenu());
@@ -51,10 +51,10 @@ public class MainFrame extends JFrame {
 		((JPanel)this.getContentPane()).setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
 		
 		diseases = new JList<Disease>(new DefaultListModel<Disease>());
-		this.add(wrapListToPanel(diseases, "Болезни", "disease"), Utils.getGridPosition(0, 0, 1, 1, new Insets(0, 0, 0, 2)));
+		this.add(wrapListToPanel(diseases, "Р‘РѕР»РµР·РЅРё", "disease"), Utils.getGridPosition(0, 0, 1, 1, new Insets(0, 0, 0, 2)));
 		
 		patients = new JList<Patient>(new DefaultListModel<Patient>());
-		this.add(wrapListToPanel(patients, "Пациенты", "patient"), Utils.getGridPosition(1, 0, 1, 1, new Insets(0, 1, 0, 0)));
+		this.add(wrapListToPanel(patients, "РџР°С†РёРµРЅС‚С‹", "patient"), Utils.getGridPosition(1, 0, 1, 1, new Insets(0, 1, 0, 0)));
 		
 		shelves = new Shelves();
 		this.add(shelves, Utils.getGridPosition(0, 1, 2, 1, new Insets(0, 0, 0, 0)));
@@ -117,24 +117,24 @@ public class MainFrame extends JFrame {
 	private JMenuBar createMenu() {
 		JMenuBar menuBar = new JMenuBar();
 		
-		JMenuItem load = new JMenuItem("Загрузить данные");
+		JMenuItem load = new JMenuItem("Р—Р°РіСЂСѓР·РёС‚СЊ РґР°РЅРЅС‹Рµ");
 		load.addActionListener(Main.getEventListener());
 		load.setActionCommand("menu-load");
 	
-		JMenuItem save = new JMenuItem("Сохранить");
+		JMenuItem save = new JMenuItem("РЎРѕС…СЂР°РЅРёС‚СЊ");
 		save.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
 		save.addActionListener(Main.getEventListener());
 		save.setActionCommand("menu-save");
 		
-		JMenuItem saveAs = new JMenuItem("Сохранить как...");
+		JMenuItem saveAs = new JMenuItem("РЎРѕС…СЂР°РЅРёС‚СЊ РєР°Рє...");
 		saveAs.addActionListener(Main.getEventListener());
 		saveAs.setActionCommand("menu-save-as");
 		
-		JMenuItem exit = new JMenuItem("Выйти");
+		JMenuItem exit = new JMenuItem("Р’С‹Р№С‚Рё");
 		exit.addActionListener(Main.getEventListener());
 		exit.setActionCommand("menu-exit");
 		
-		JMenu file = new JMenu("Файл");
+		JMenu file = new JMenu("Р¤Р°Р№Р»");
 		file.add(load);
 		file.add(save);
 		file.add(saveAs);
@@ -142,27 +142,27 @@ public class MainFrame extends JFrame {
 		file.add(exit);
 		menuBar.add(file);
 		
-		JMenuItem positive = new JMenuItem("Положительные результаты");
+		JMenuItem positive = new JMenuItem("РџРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹");
 		positive.addActionListener(Main.getEventListener());
 		positive.setActionCommand("work-positive");
 		
-		JMenuItem negative = new JMenuItem("Отрицательные результаты");
+		JMenuItem negative = new JMenuItem("РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚С‹");
 		negative.addActionListener(Main.getEventListener());
 		negative.setActionCommand("work-negative");
 		
-		JMenuItem means = new JMenuItem("Наиболее популярные средства");
+		JMenuItem means = new JMenuItem("РќР°РёР±РѕР»РµРµ РїРѕРїСѓР»СЏСЂРЅС‹Рµ СЃСЂРµРґСЃС‚РІР°");
 		means.addActionListener(Main.getEventListener());
 		means.setActionCommand("work-means");
 		
-		JMenuItem diseases = new JMenuItem("Болезни с положительными исходами");
+		JMenuItem diseases = new JMenuItem("Р‘РѕР»РµР·РЅРё СЃ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹РјРё РёСЃС…РѕРґР°РјРё");
 		diseases.addActionListener(Main.getEventListener());
 		diseases.setActionCommand("work-diseases");
 		
-		JMenuItem reset = new JMenuItem("Сбросить выделение");
+		JMenuItem reset = new JMenuItem("РЎР±СЂРѕСЃРёС‚СЊ РІС‹РґРµР»РµРЅРёРµ");
 		reset.addActionListener(Main.getEventListener());
 		reset.setActionCommand("work-reset");
 		
-		JMenu work = new JMenu("Обработка данных");
+		JMenu work = new JMenu("РћР±СЂР°Р±РѕС‚РєР° РґР°РЅРЅС‹С…");
 		work.add(positive);
 		work.add(negative);
 		work.addSeparator();
@@ -206,20 +206,20 @@ public class MainFrame extends JFrame {
 		panel.setLayout(new BoxLayout(panel, BoxLayout.LINE_AXIS));
 		panel.add(Box.createHorizontalGlue());
 		
-		JButton add = new JButton("Добавить");
+		JButton add = new JButton("Р”РѕР±Р°РІРёС‚СЊ");
 		Utils.setFixedSize(add, 82, 22);
 		add.addActionListener(Main.getEventListener());
 		add.setActionCommand(eventPrefix + "-add");
 		panel.add(add);
 		
-		JButton edit = new JButton("Редактировать");
+		JButton edit = new JButton("Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ");
 		Utils.setFixedSize(edit, 120, 22);
 		edit.setEnabled(false);
 		edit.addActionListener(Main.getEventListener());
 		edit.setActionCommand(eventPrefix + "-edit");
 		panel.add(edit);
 		
-		JButton remove = new JButton("Удалить");
+		JButton remove = new JButton("РЈРґР°Р»РёС‚СЊ");
 		Utils.setFixedSize(remove, 82, 22);
 		remove.setEnabled(false);
 		remove.addActionListener(Main.getEventListener());

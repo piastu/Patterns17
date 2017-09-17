@@ -1,11 +1,11 @@
-package cw.gui.form;
+п»їpackage cw.gui.form;
 
 import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ListModel;
 
-// Класс-описание поля для построителя форм
+// РљР»Р°СЃСЃ-РѕРїРёСЃР°РЅРёРµ РїРѕР»СЏ РґР»СЏ РїРѕСЃС‚СЂРѕРёС‚РµР»СЏ С„РѕСЂРј
 public class FieldData {
 	
 	public static enum Type { STRING, INT, TEXT, SINGLE_SELECT, MULTI_SELECT, DATE, TIME }
