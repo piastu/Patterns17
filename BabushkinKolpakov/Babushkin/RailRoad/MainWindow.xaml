@@ -1,0 +1,21 @@
+﻿<Window x:Class="RailRoad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="900" Loaded="Window_Loaded" MouseRightButtonDown="Window_MouseRightButtonDown" Closing="Window_Closing">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Добавить">
+                <MenuItem Header="точку" Click="AddArrowWPF"/>
+                <MenuItem Header="дорогу" Click="AddRoadWPF"/>
+                <MenuItem Header="станцию" Click="AddStationWPF"/>
+                <MenuItem Header="поезд" Click="AddTrainWPF"/>
+                <MenuItem Header="Маршрут" Click="AddRouteWPF"/>
+            </MenuItem>
+
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid>
+        <Canvas Margin="10" x:Name="CanvasRoad">
+        </Canvas>
+    </Grid>
+</Window>

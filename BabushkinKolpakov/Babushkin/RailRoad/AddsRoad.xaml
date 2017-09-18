@@ -1,0 +1,28 @@
+﻿<Window x:Class="RailRoad.AddsRoad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddsRoad" Height="134.336" Width="407.57" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <DataTemplate x:Key="itemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding Path=Name}" Width="50" />
+                <ComboBox ItemsSource="{Binding Path=PhonebookEntries}" 
+                    DisplayMemberPath="Name" 
+                    SelectedValuePath="Name" 
+                    SelectedValue="{Binding Path=PhonebookEntry}"
+                    Width="200"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Margin="0,0,2,2">
+        <CheckBox x:Name="CheckSingeRoad" Content="Однапутная" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboboxArrowFirst" HorizontalAlignment="Left" Margin="97,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboboxArrowFirst_SelectionChanged"/>
+
+
+        <ComboBox x:Name="ComboboxArrowSecond" HorizontalAlignment="Left" Margin="222,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboboxArrowSecond_SelectionChanged"/>
+        <Button Content="Добавить" Margin="135,37,0,0" VerticalAlignment="Top" Click="Button_Click" HorizontalAlignment="Left" Width="207"/>
+        <TextBox x:Name="len" HorizontalAlignment="Left" Height="23" Margin="10,37,0,0" TextWrapping="Wrap" Text="длина" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

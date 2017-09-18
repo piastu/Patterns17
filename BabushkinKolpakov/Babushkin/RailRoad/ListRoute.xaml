@@ -1,0 +1,9 @@
+﻿<Window x:Class="RailRoad.ListRoute"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListRoute" Height="357" Width="540" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <ListBox x:Name="listsss" HorizontalAlignment="Left" Height="307" Margin="10,10,0,0" VerticalAlignment="Top" Width="512"  SelectionChanged="lis_SelectionChanged"/>
+
+    </Grid>
+</Window>
