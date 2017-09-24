@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ParserClothingSite.Parser.NinjectBindings">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\NinjectBindings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.Parser.Parser&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAQQACAAAQAAEAQAAAAAAAEAAQAIAAAABBAAABA=</HashCode>
+      <FileName>Parser\Parser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ParserClothingSite.Parser.SubjectInfo">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQIAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\SubjectInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.CollectionExtension">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\CollectionExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.Page&lt;Z&gt;">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAACAAAAAAkEAAAAAAAAAAQIAAAAAAAAAAAAQ=</HashCode>
+      <FileName>PageInfo\Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.PageIterableAction" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\PageIterableAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.273" Collapsed="true" />
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.PageManager" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAkAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\PageManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.PageSimpleBlock">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAABA=</HashCode>
+      <FileName>PageInfo\PageSimpleBlock.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.PageTagBlock">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAQAAAAAAIAAABAAAAAABA=</HashCode>
+      <FileName>PageInfo\PageTagBlock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.Factory.AbstractPageFactory&lt;T&gt;">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\Factory\AbstractPageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.Factory.SimplePageFactory&lt;T&gt;">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\Factory\SimplePageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.Router.FacadePage&lt;Z&gt;" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>PageInfo\Router\FacadePage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ParserClothingSite.PageInfo.Router.PrefixRouter">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEAAAAAAAAAAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\Router\PrefixRouter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParserClothingSite.GetContentHelper.HtmlSubject">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>GetContentHelper\HtmlSubject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ParserClothingSite.Parser.IHtmlParser&lt;T&gt;">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\IHtmlParser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ParserClothingSite.PageInfo.IContainerForBlock&lt;TypeContainer&gt;">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>PageInfo\IContainerForBlock.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ParserClothingSite.PageInfo.IPageAction&lt;Z&gt;">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\IPageAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ParserClothingSite.PageInfo.IPageManager&lt;Z&gt;">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAkAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageInfo\IPageManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ParserClothingSite.PageInfo.Router.IRepositoryPage&lt;Z&gt;">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>PageInfo\Router\IRepositoryPage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ParserClothingSite.GetContentHelper.IGetHtmlContent">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>GetContentHelper\IGetHtmlContent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
