@@ -20,7 +20,7 @@ namespace TelegramBot
     public class TelegramRequest
     {
         public StandartEventFactor Factory = new StandartEventFactor();
-        public string _token;
+        public string _token { get; set; }
         public TelegramRequest(string Token)
         {
             _token = Token;
@@ -42,7 +42,8 @@ namespace TelegramBot
             {
                 using (WebClient webClient = new WebClient())
                 {
-                    string response = webClient.DownloadString("https://api.telegram.org/bot" + _token + "/getupdates?offset=" + (LastUpdateID + 1));
+                    string response = webClient.DownloadString("https://api.telegram.org/bot" + _token 
+                        + "/getupdates?offset=" + (LastUpdateID + 1));
                     if (response.Length <= 23)
                         continue;
                     var N = JSON.Parse(response);
@@ -58,10 +59,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили текстовое сообщение");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили текстовое сообщение");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -72,10 +71,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили cтикер");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили cтикер");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -86,10 +83,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили фотографию");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили фотографию");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -100,10 +95,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили видеозапись");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили видеозапись");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -114,10 +107,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили документ");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили документ");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -128,10 +119,8 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили локацию");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили локацию");
+                                        
                                     }
                                     catch (Exception)
                                     { break; }
@@ -142,10 +131,7 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили контакт");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили контакт");
                                     }
                                     catch (Exception)
                                     { break; }
@@ -156,10 +142,7 @@ namespace TelegramBot
                                 {
                                     try
                                     {
-                                        MessageText.Method.Name.ToString();
-                                        Notification();
-                                        Console.WriteLine("Мы получили голосовую запись");
-                                        Notification(false);
+                                        PrintDataAction("Мы получили голосовую запись");
                                     }
                                     catch (Exception)
                                     { break; }
@@ -171,6 +154,13 @@ namespace TelegramBot
                     }
                 }
             }
+        }
+        private void PrintDataAction(string data)
+        {
+            MessageText.Method.Name.ToString();
+            Notification();
+            Console.WriteLine(data);
+            Notification(false);
         }
         private string WhatsType(string JSON)
         {
