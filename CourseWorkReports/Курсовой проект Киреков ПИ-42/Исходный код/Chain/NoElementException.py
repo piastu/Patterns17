@@ -1,0 +1,2 @@
+class NoElementException(BaseException):
+    pass
