@@ -1,0 +1,82 @@
+#ifndef UTIL_H
+#define UTIL_H
+
+#include "stdint.h"
+
+struct Color
+{
+		uint32_t rgba;
+		Color()
+		{
+			rgba = 0;
+		}
+		Color(int r, int g, int b, int a = 255)
+		{
+			rgba = 0;
+			uint32_t result = 0;
+			result |= r;
+			result << 4;
+			result |= g;
+			result << 4;
+			result |= b;
+			result << 4;
+			result |= a;
+			rgba = result;
+		}
+		int r()
+		{
+			int result = rgba;
+			result &= 0xff000000;
+			result >> 24;
+			return result;
+		}
+		int g()
+		{
+			int result = rgba;
+			result &= 0x00ff0000;
+			result >> 16;
+			return result;
+		}
+		int b()
+		{
+			int result = rgba;
+			result &= 0x0000ff00;
+			result >> 8;
+			return result;
+		}
+		int a()
+		{
+			int result = rgba;
+			result &= 0x000000ff;
+			return result;
+		}
+		void setR(int r)
+		{
+			rgba &= 0x00ffffff;
+			uint32_t newR = r;
+			newR << 24;
+			rgba |= newR;
+		}
+		void setG(int g)
+		{
+			rgba &= 0xff00ffff;
+			uint32_t newG = g;
+			newG << 16;
+			rgba |= newG;
+		}
+		void setB(int b)
+		{
+			rgba &= 0x00ffffff;
+			uint32_t newB = b;
+			newB << 8;
+			rgba |= newB;
+		}
+		void setA(int a)
+		{
+			rgba &= 0x00ffffff;
+			uint32_t newA = a;
+			rgba |= newA;
+		}
+};
+
+#endif // UTIL_H
